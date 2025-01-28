@@ -1,11 +1,18 @@
 <script setup>
+import FirstSection from '@/components/sections/FirstSection.vue'
+import SecondSection from '@/components/sections/SecondSection.vue'
 </script>
 
 <template>
-  <div>
-    test
-  </div>
+ <div class="app-container">
+   <first-section/>
+   <second-section/>
+ </div>
 </template>
 
 <style scoped>
+.app-container {
+  width: 100%;
+  height: 100%;
+}
 </style>

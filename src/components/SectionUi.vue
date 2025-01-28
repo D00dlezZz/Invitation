@@ -1,14 +1,21 @@
 <script setup>
-
+defineProps({
+  showBottom: true,
+  showTop: true,
+})
 </script>
 
 <template>
 <div class="section-wrap">
-  <img src="../../public/top-left.png" alt="" class="top-left" />
-  <img src="../../public/top-right.png" alt="" class="top-right">
+  <div v-if="showTop">
+    <img src="../../public/top-left.png" alt="" class="top-left" />
+    <img src="../../public/top-right.png" alt="" class="top-right">
+  </div>
   <slot></slot>
-  <img src="../../public/bottom-left.png" alt="" class="bottom-left">
-  <img src="../../public/bottom-right.png" alt="" class="bottom-right">
+  <div v-if="showBottom">
+    <img src="../../public/bottom-left.png" alt="" class="bottom-left">
+    <img src="../../public/bottom-right.png" alt="" class="bottom-right">
+  </div>
 </div>
 </template>
 

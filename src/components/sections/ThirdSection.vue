@@ -4,7 +4,7 @@ import SectionUi from '@/components/SectionUi.vue'
 </script>
 
 <template>
-<section-ui>
+<section-ui show-bottom="true">
   sf
 </section-ui>
 </template>

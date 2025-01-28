@@ -4,7 +4,7 @@ import SectionUi from '@/components/SectionUi.vue'
 </script>
 
 <template>
-<section-ui>
+<section-ui show-bottom="true" show-top="true">
 <div class="test-section">
   <h1>Иван & Ирина</h1>
   <div class="img-flex">

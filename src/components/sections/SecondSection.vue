@@ -6,15 +6,15 @@ import SectionUi from '@/components/SectionUi.vue'
 <template>
   <section-ui show-top="true">
     <div class="second-section-container">
-      <div class="afs">
+      <div class="second-section-wrap">
         <h3>Дорогие гости!</h3>
         <p>В НАШЕЙ ЖИЗНИ ПРОИЗОЙДЕТ ОЧЕНЬ ВАЖНОЕ СОБЫТИЕ - НАША СВАДЬБА!
           ПОЗВОЛЬТЕ ПРИГЛАСИТЬ ВАС РАЗДЕЛИТЬ С НАМИ РАДОСТЬ ЭТОГО ДНЯ</p>
       </div>
       <img src="../../../public/calendar.png" alt="">
-      <div class="afs">
+      <div class="second-section-wrap location">
         <h3>Локация:</h3>
-        <p>РЕСТОРАН “ЗАВИДНОЕ”
+        <p>РЕСТОРАН “ЗАВИДНОЕ”<br/>
           РАБОЧИЙ ПОСЕЛОК ИЗМАЙЛОВО, 23, СТР. 1</p>
       </div>
     </div>
@@ -25,31 +25,36 @@ import SectionUi from '@/components/SectionUi.vue'
 .second-section-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 170px;
+  gap: 30px;
+  margin: 0 auto;
   color: #435B47;
   width: 100%;
 }
 img {
   width: 300px;
+  margin-bottom: 30px;
 }
 
-.afs {
+p {
+  font-size: 20px;
+}
+
+.second-section-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 90px;
-  max-width: 320px;
-  gap: 30px;
+  width: 40%;
+}
+
+.location {
+  max-width: 100%;
 }
 
 h3 {
-  font-family: "Great Vibes", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
-  color: #435B47;
+  margin-bottom: 25px;
 }
 </style>

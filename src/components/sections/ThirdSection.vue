@@ -28,7 +28,7 @@ import SectionUi from '@/components/SectionUi.vue'
       <h2>Дорогие гости!</h2>
       <p class="questionnaire-text">Просим Вас подтвердить свое присутствие до 1 мая, что бы мы могли планировать свою свадьбу наилучшим образом</p>
       <p class="questionnaire-text">Ответьте пожалуйста на несколько вопросов, которые мы для вас подготовили:</p>
-      <button>АНКЕТА ГОСТЯ</button>
+      <router-link :to="{name: 'questionnaire'}" target="_blank" class="button">АНКЕТА ГОСТЯ</router-link>
     </div>
     <p class="additional-info">В случае возникновения вопросов, касаемо торжества, обращайтесь к нашему координатору:<br/>
       +7 963 603 90 06 - Евгения</p>
@@ -42,11 +42,11 @@ import SectionUi from '@/components/SectionUi.vue'
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 50px;
+  margin: 0 auto;
 }
 
 .event-program-warp {
-
+  margin-top: 40px;
 }
 
 .event-time-wrap {
@@ -69,19 +69,11 @@ import SectionUi from '@/components/SectionUi.vue'
 }
 
 h1 {
-  font-family: "Great Vibes", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #435B47;
   font-size: 60px;
   margin-bottom: 30px;
 }
 
 h2 {
-  font-family: "Great Vibes", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #435B47;
   font-size: 60px;
 }
 .questionnaire-wrap {
@@ -93,20 +85,25 @@ h2 {
   border: 6px solid #435B47;
   margin-top: 20px;
   gap: 20px;
+  max-width: 500px;
 }
 
 .questionnaire-text {
   text-align: center;
   font-size: 20px;
 }
-button {
+.button {
   width: 75%;
   border: none;
   background: #435B47;
   font-size: 15px;
   padding: 10px;
   color: #CFC2B1;
-  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Gothic A1", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .additional-info {

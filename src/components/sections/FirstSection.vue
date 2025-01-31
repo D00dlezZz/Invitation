@@ -5,37 +5,32 @@ import SectionUi from '@/components/SectionUi.vue'
 
 <template>
 <section-ui show-bottom="true" show-top="true">
-<div class="test-section">
+<div class="first-section-wrapper">
   <h1>Иван & Ирина</h1>
   <div class="img-flex">
-    <img src="../../../public/preview.png" alt="" class="test">
+    <img src="../../../public/preview.png" alt="">
   </div>
 </div>
 </section-ui>
 </template>
 
 <style scoped>
-.test {
-  width: 430px;
-}
-.test-section {
+.first-section-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  margin: 0 auto;
 }
 h1 {
-  font-size: 54px;
-  margin-top: 190px;
-  font-family: "Great Vibes", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #435B47;
+  margin-bottom: 20px;
 }
 .img-flex {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+}
+
+img {
+  width: 430px;
   margin-left: -10px;
 }
 </style>

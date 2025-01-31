@@ -1,16 +1,9 @@
 <script setup>
-import FirstSection from '@/components/sections/FirstSection.vue'
-import SecondSection from '@/components/sections/SecondSection.vue'
-import ThirdSection from '@/components/sections/ThirdSection.vue'
-import FourthSection from '@/components/sections/FourthSection.vue'
 </script>
 
 <template>
  <div class="app-container">
-   <first-section/>
-   <second-section/>
-   <third-section/>
-   <fourth-section/>
+    <router-view/>
  </div>
 </template>
 
@@ -18,5 +11,8 @@ import FourthSection from '@/components/sections/FourthSection.vue'
 .app-container {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 </style>

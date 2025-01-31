@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-<div class="section-wrap">
+<div class="section-wrap page">
   <div v-if="showTop">
     <img src="../../public/top-left.png" alt="" class="top-left" />
     <img src="../../public/top-right.png" alt="" class="top-right">
@@ -22,8 +22,6 @@ defineProps({
 <style scoped>
 .section-wrap {
   display: flex;
-  height: 100vh;
-  width: 100vw;
   position: relative;
 }
 
@@ -34,7 +32,7 @@ img {
 .top-left {
   top: 0;
   left: 0;
-  width: 173px;
+  width: 10.813rem;
 }
 
 .top-right {

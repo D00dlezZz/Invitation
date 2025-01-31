@@ -6,8 +6,21 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'app',
       component: AppView,
+      redirect: { name: 'home' },
+      children: [
+        {
+          path: '',
+          name: 'home',
+          component: () => import('../views/HomeView.vue'),
+        },
+        {
+          path: '/questionnaire',
+          name: 'questionnaire',
+          component: () => import('../views/QuestionnaireView.vue'),
+        }
+      ]
     },
   ],
 })

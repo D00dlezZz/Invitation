@@ -27,8 +27,8 @@ import SectionUi from '@/components/SectionUi.vue'
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  margin-top: 90px;
-  gap: 29px;
+  margin: 0 auto;
+  gap: 30px;
 }
 .details-wrap {
   display: flex;
@@ -36,6 +36,7 @@ import SectionUi from '@/components/SectionUi.vue'
   justify-content: center;
   align-items: center;
   width: 60%;
+  margin-top: 90px;
 }
 
 .dress-code {
@@ -44,5 +45,10 @@ import SectionUi from '@/components/SectionUi.vue'
 
 .presents {
   width: 70%;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 20px;
 }
 </style>

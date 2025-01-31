@@ -1,0 +1,48 @@
+<script setup>
+
+import SectionUi from '@/components/SectionUi.vue'
+</script>
+
+<template>
+  <section-ui show-bottom="true" show-top="true">
+    <div class="fourth-section-container">
+      <div class="details-wrap">
+        <h1>Детали</h1>
+        <p>МЫ БУДЕМ РАДЫ, ЕСЛИ ВЫ ПОДДЕРЖИТЕ ЦВЕТОВУЮ ПАЛИТРУ НАШЕЙ СВАДЬБЫ:</p>
+      </div>
+      <img src="../../../public/dress-code.png" alt="" class="dress-code">
+      <div>
+        <p>НАШИ ПОЖЕЛАНИЯ ПО ПОДАРКАМ:</p>
+        <img src="../../../public/presents.png" alt="" class="presents">
+      </div>
+    </div>
+  </section-ui>
+</template>
+
+<style scoped>
+
+.fourth-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-top: 90px;
+  gap: 29px;
+}
+.details-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.dress-code {
+  width: 70%;
+}
+
+.presents {
+  width: 70%;
+}
+</style>

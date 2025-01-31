@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Great+Vibes&family=Satisfy&display=swap');
 
 #app {
   max-width: 1080px;
@@ -16,7 +16,15 @@ body {
 
 p, h1, h2, h3 {
   margin: 0;
+  color: #435B47;
 }
+
+p, span {
+  font-family: "Gothic A1", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 @media screen and (max-width: 800px) {

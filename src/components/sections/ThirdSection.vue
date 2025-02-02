@@ -100,20 +100,6 @@ h2 {
   text-align: center;
   font-size: 20px;
 }
-.button {
-  width: 75%;
-  border: none;
-  background: #435B47;
-  font-size: 15px;
-  padding: 10px;
-  color: #CFC2B1;
-  text-align: center;
-  text-decoration: none;
-  font-family: "Gothic A1", serif;
-  font-weight: 400;
-  font-style: normal;
-  cursor: pointer;
-}
 
 .additional-info {
   text-align: center;

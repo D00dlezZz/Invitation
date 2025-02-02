@@ -107,4 +107,8 @@ h2 {
   font-size: 15px;
   margin-top: 30px;
 }
+
+.button {
+  width: 75%;
+}
 </style>

@@ -11,7 +11,7 @@ import SectionUi from '@/components/SectionUi.vue'
         <p>В НАШЕЙ ЖИЗНИ ПРОИЗОЙДЕТ ОЧЕНЬ ВАЖНОЕ СОБЫТИЕ - НАША СВАДЬБА!
           ПОЗВОЛЬТЕ ПРИГЛАСИТЬ ВАС РАЗДЕЛИТЬ С НАМИ РАДОСТЬ ЭТОГО ДНЯ</p>
       </div>
-      <img src="../../../public/calendar.png" alt="">
+      <img src="../../../public/icons/calendar.png" alt="">
       <div class="second-section-wrap location">
         <h3>Локация:</h3>
         <p>РЕСТОРАН “ЗАВИДНОЕ”<br/>

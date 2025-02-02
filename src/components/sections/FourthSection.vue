@@ -10,10 +10,10 @@ import SectionUi from '@/components/SectionUi.vue'
         <h1>Детали</h1>
         <p>МЫ БУДЕМ РАДЫ, ЕСЛИ ВЫ ПОДДЕРЖИТЕ ЦВЕТОВУЮ ПАЛИТРУ НАШЕЙ СВАДЬБЫ:</p>
       </div>
-      <img src="../../../public/dress-code.png" alt="" class="dress-code">
+      <img src="../../../public/icons/dress-code.png" alt="" class="dress-code">
       <div>
         <p>НАШИ ПОЖЕЛАНИЯ ПО ПОДАРКАМ:</p>
-        <img src="../../../public/presents.png" alt="" class="presents">
+        <img src="../../../public/icons/presents.png" alt="" class="presents">
       </div>
     </div>
   </section-ui>

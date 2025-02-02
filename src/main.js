@@ -2,9 +2,12 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index.js'
+import emailjs from '@emailjs/browser'
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+emailjs.init('5jGyrKXwAWTKDvkf6');
+
+app.use(router, emailjs)
 
 app.mount('#app')

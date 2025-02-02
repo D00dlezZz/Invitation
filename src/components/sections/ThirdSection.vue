@@ -1,6 +1,11 @@
 <script setup>
-
 import SectionUi from '@/components/SectionUi.vue'
+import QuestionnaireModalView from '@/views/QuestionnaireModalView.vue'
+import { ref } from 'vue'
+const isQuestionnaireModalOpen = ref(false);
+const openQuestionnaireModal = () => {
+  isQuestionnaireModalOpen.value = true
+}
 </script>
 
 <template>
@@ -28,12 +33,15 @@ import SectionUi from '@/components/SectionUi.vue'
       <h2>Дорогие гости!</h2>
       <p class="questionnaire-text">Просим Вас подтвердить свое присутствие до 1 мая, что бы мы могли планировать свою свадьбу наилучшим образом</p>
       <p class="questionnaire-text">Ответьте пожалуйста на несколько вопросов, которые мы для вас подготовили:</p>
-      <router-link :to="{name: 'questionnaire'}" target="_blank" class="button">АНКЕТА ГОСТЯ</router-link>
+      <button  class="button" @click="openQuestionnaireModal">АНКЕТА ГОСТЯ</button>
     </div>
     <p class="additional-info">В случае возникновения вопросов, касаемо торжества, обращайтесь к нашему координатору:<br/>
       +7 963 603 90 06 - Евгения</p>
   </div>
 </section-ui>
+  <teleport to="body">
+    <QuestionnaireModalView v-if="isQuestionnaireModalOpen"/>
+  </teleport>
 </template>
 
 <style scoped>
@@ -104,6 +112,7 @@ h2 {
   font-family: "Gothic A1", serif;
   font-weight: 400;
   font-style: normal;
+  cursor: pointer;
 }
 
 .additional-info {

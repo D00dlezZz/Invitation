@@ -8,13 +8,13 @@ defineProps({
 <template>
 <div class="section-wrap page">
   <div v-if="showTop">
-    <img src="../../public/top-left.png" alt="" class="top-left" />
-    <img src="../../public/top-right.png" alt="" class="top-right">
+    <img src="../../public/icons/top-left.png" alt="" class="top-left" />
+    <img src="../../public/icons/top-right.png" alt="" class="top-right">
   </div>
   <slot></slot>
   <div v-if="showBottom">
-    <img src="../../public/bottom-left.png" alt="" class="bottom-left">
-    <img src="../../public/bottom-right.png" alt="" class="bottom-right">
+    <img src="../../public/icons/bottom-left.png" alt="" class="bottom-left">
+    <img src="../../public/icons/bottom-right.png" alt="" class="bottom-right">
   </div>
 </div>
 </template>

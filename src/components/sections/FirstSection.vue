@@ -8,7 +8,7 @@ import SectionUi from '@/components/SectionUi.vue'
 <div class="first-section-wrapper">
   <h1>Иван & Ирина</h1>
   <div class="img-flex">
-    <img src="../../../public/preview.png" alt="">
+    <img src="../../../public/icons/preview.png" alt="">
   </div>
 </div>
 </section-ui>

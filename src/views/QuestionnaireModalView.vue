@@ -1,23 +1,28 @@
 <script setup>
 import emailjs from '@emailjs/browser';
+import { ref } from 'vue'
 
 const formParams = {
   name: '',
-  alcohol: {
-    champagne: false,
-    whiteWine: false,
-    redWine: false,
-    vodka: false,
-    whiskey: false,
-    rum: false
-  },
   allergy: '',
   childAge: '',
   separateMenu:'',
   alcoholList: ''
 }
 
+const arrayOfAlcohol = ref([]);
+
+const selectAlcohol = (value) => {
+  if (!arrayOfAlcohol.value.includes(value)) {
+    arrayOfAlcohol.value.push(value)
+  }else {
+    let index = arrayOfAlcohol.value.indexOf(value);
+    arrayOfAlcohol.value.splice(index, 1);
+  }
+}
+
 const sendMail = () => {
+  formParams.alcoholList = arrayOfAlcohol.value.toString();favicon.ico
   emailjs.send("service_khfwutq", "template_cpgvq59", formParams).then(
     (response) => {
       console.log('SUCCESS!', response.status, response.text);
@@ -26,7 +31,6 @@ const sendMail = () => {
       console.log('FAILED...', error);
     },
   );
-  console.log(formParams)
 }
 </script>
 
@@ -43,27 +47,27 @@ const sendMail = () => {
         <p>Ваши предпочтения по напиткам:</p>
         <div class="checkbox-container">
           <div class="checkbox-wrap">
-            <input type="checkbox" v-model="formParams.alcohol.champagne"/>
+            <input type="checkbox" value="Шампанское" @click="selectAlcohol('Шампанское')"/>
             <label>Шампанское</label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox"  v-model="formParams.alcohol.redWine"/>
+            <input type="checkbox" value="Вино красное" @click="selectAlcohol('Вино красное')"/>
             <label>Вино красное</label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox"  v-model="formParams.alcohol.whiteWine"/>
+            <input type="checkbox" value="Вино белое" @click="selectAlcohol('Вино белое')"/>
             <label>Вино белое</label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox"  v-model="formParams.alcohol.vodka"/>
+            <input type="checkbox" value="Водка"  @click="selectAlcohol('Водка')"/>
             <label>Водка</label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox"  v-model="formParams.alcohol.whiskey"/>
+            <input type="checkbox" value="Водка"  @click="selectAlcohol('Виски')"/>
             <label>Виски</label>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox"  v-model="formParams.alcohol.rum"/>
+            <input type="checkbox" value="Ром"  @click="selectAlcohol('Ром')"/>
             <label>Ром</label>
           </div>
         </div>

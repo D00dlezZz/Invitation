@@ -1,14 +1,17 @@
 <script setup>
 import emailjs from '@emailjs/browser';
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import IconClose from '@/components/IconClose.vue'
 
-const formParams = {
+const emit = defineEmits(['close-modal'])
+
+const formParams = ref({
   name: '',
   allergy: '',
   childAge: '',
   separateMenu:'',
   alcoholList: ''
-}
+})
 
 const arrayOfAlcohol = ref([]);
 
@@ -21,9 +24,14 @@ const selectAlcohol = (value) => {
   }
 }
 
+const isButtonDisabled = computed(() => {
+  return !formParams.value.name.length || !formParams.value.allergy.length || !arrayOfAlcohol.value.length;
+})
+
 const sendMail = () => {
-  formParams.alcoholList = arrayOfAlcohol.value.toString();favicon.ico
-  emailjs.send("service_khfwutq", "template_cpgvq59", formParams).then(
+ if (isButtonDisabled.value) return
+  formParams.value.alcoholList = arrayOfAlcohol.value.toString();favicon.ico
+  emailjs.send("service_khfwutq", "template_cpgvq59", formParams.value).then(
     (response) => {
       console.log('SUCCESS!', response.status, response.text);
     },
@@ -37,6 +45,7 @@ const sendMail = () => {
 <template>
 <div class="questionnaire-modal-wrapper">
   <form class="questionnaire-form-wrapper">
+    <icon-close class="close-icon" @click="emit('close-modal')"/>
     <p class="questionnaire-form__remark">*Просим вас заполнить анкету индивидуально, что бы мы могли учесть ответы каждого гостя</p>
     <div class="form-container">
       <div class="input-wrap">
@@ -85,7 +94,7 @@ const sendMail = () => {
         <p>Нужно ли ребенку заказывать отдельные (определенные) блюда?</p>
         <input type="text" placeholder="Фуагра и черная икра"  v-model="formParams.separateMenu">
       </div>
-      <div class="button" @click="sendMail">Отправить</div>
+      <div class="button" :class="{'disabled': isButtonDisabled}" @click="sendMail">Отправить</div>
     </div>
   </form>
 </div>
@@ -129,12 +138,12 @@ const sendMail = () => {
 
 .close-icon {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
   z-index: 1010;
-  background: red;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .form-container {
@@ -171,5 +180,9 @@ const sendMail = () => {
   font-weight: 400;
   font-style: normal;
   color: #435B47;
+}
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 </style>

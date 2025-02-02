@@ -3,8 +3,12 @@ import SectionUi from '@/components/SectionUi.vue'
 import QuestionnaireModalView from '@/views/QuestionnaireModalView.vue'
 import { ref } from 'vue'
 const isQuestionnaireModalOpen = ref(false);
+
 const openQuestionnaireModal = () => {
   isQuestionnaireModalOpen.value = true
+}
+const closeQuestionnaireModal = () => {
+  isQuestionnaireModalOpen.value = false
 }
 </script>
 
@@ -40,7 +44,10 @@ const openQuestionnaireModal = () => {
   </div>
 </section-ui>
   <teleport to="body">
-    <QuestionnaireModalView v-if="isQuestionnaireModalOpen"/>
+    <QuestionnaireModalView
+      v-if="isQuestionnaireModalOpen"
+      @close-modal="closeQuestionnaireModal"
+    />
   </teleport>
 </template>
 

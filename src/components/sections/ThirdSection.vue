@@ -58,6 +58,7 @@ const closeQuestionnaireModal = () => {
   align-items: center;
   justify-content: flex-start;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .event-program-warp {

@@ -30,13 +30,13 @@ const isButtonDisabled = computed(() => {
 
 const sendMail = () => {
  if (isButtonDisabled.value) return
-  formParams.value.alcoholList = arrayOfAlcohol.value.toString();favicon.ico
+  formParams.value.alcoholList = arrayOfAlcohol.value.toString();
   emailjs.send("service_khfwutq", "template_cpgvq59", formParams.value).then(
-    (response) => {
-      console.log('SUCCESS!', response.status, response.text);
+    () => {
+      emit('close-modal')
     },
-    (error) => {
-      console.log('FAILED...', error);
+    () => {
+      console.alert('Что-то пошло не так!')
     },
   );
 }

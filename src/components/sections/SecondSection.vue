@@ -25,16 +25,15 @@ import SectionUi from '@/components/SectionUi.vue'
 .second-section-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  gap: 6.98vw;
+  gap: 4.98vw;
   margin: 0 auto;
   color: #435B47;
   width: 100%;
   @media screen and (min-width: 800px) {
     gap: 30px;
-    justify-content: center;
   }
 }
 img {
@@ -63,6 +62,6 @@ p {
 }
 
 h3 {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 </style>

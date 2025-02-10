@@ -50,7 +50,7 @@ const sendMail = () => {
     <div class="form-container">
       <div class="input-wrap">
         <p>Ваше имя и фамилия:</p>
-        <input type="text" placeholder="Имя Фамилия" v-model="formParams.name">
+        <input type="text" placeholder="Желательно настоящую" v-model="formParams.name">
       </div>
       <div class="input-wrap">
         <p>Ваши предпочтения по напиткам:</p>

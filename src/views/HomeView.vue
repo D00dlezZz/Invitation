@@ -22,6 +22,9 @@ import FourthSection from '@/components/sections/FourthSection.vue'
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  @media screen and (max-width: 800px) {
+    height: calc(100vh - 60px);
+  }
 }
 
 .page {

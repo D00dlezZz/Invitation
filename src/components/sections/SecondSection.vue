@@ -25,13 +25,17 @@ import SectionUi from '@/components/SectionUi.vue'
 .second-section-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100vh;
-  gap: 30px;
+  gap: 6.98vw;
   margin: 0 auto;
   color: #435B47;
   width: 100%;
+  @media screen and (min-width: 800px) {
+    gap: 30px;
+    justify-content: center;
+  }
 }
 img {
   width: 300px;
@@ -49,6 +53,9 @@ p {
   align-items: center;
   text-align: center;
   width: 40%;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 }
 
 .location {

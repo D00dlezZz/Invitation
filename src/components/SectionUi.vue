@@ -32,23 +32,23 @@ img {
 .top-left {
   top: 0;
   left: 0;
-  width: 10.813rem;
+  width: 20vh;
 }
 
 .top-right {
   top: 0;
   right: 0;
-  width: 216px;
+  width: 20vh;
 }
 
 .bottom-left {
   bottom: 0;
   left: 0;
-  width: 100px;
+  width: 10vh;
 }
 .bottom-right {
   bottom: 0;
   right: 0;
-  width: 133px;
+  width: 13vh;
 }
 </style>

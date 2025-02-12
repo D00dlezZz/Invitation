@@ -56,13 +56,9 @@ const closeQuestionnaireModal = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 auto;
-  height: 100vh;
-}
-
-.event-program-warp {
-  margin-top: 40px;
+  height: 100dvh;
 }
 
 .event-time-wrap {
@@ -97,7 +93,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 70%;
   border: 6px solid #435B47;
   margin-top: 20px;
   gap: 20px;
@@ -106,7 +102,7 @@ h2 {
 
 .questionnaire-text {
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .additional-info {

@@ -121,9 +121,10 @@ const sendMail = () => {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 40px;
+  padding: 35px;
   background: #CFC2B1;
   border-radius: 4px;
+  height: 90%;
   gap: 20px;
   max-width: 500px;
   font-size: 18px;

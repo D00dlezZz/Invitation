@@ -27,7 +27,7 @@ import SectionUi from '@/components/SectionUi.vue'
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
   gap: 4.98vw;
   margin: 0 auto;
   color: #435B47;

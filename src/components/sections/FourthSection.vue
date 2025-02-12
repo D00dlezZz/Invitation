@@ -29,7 +29,7 @@ import SectionUi from '@/components/SectionUi.vue'
   text-align: center;
   margin: 0 auto;
   gap: 30px;
-  height: 100vh;
+  height: 100dvh;
 }
 .details-wrap {
   display: flex;

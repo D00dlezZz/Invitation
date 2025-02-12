@@ -17,14 +17,11 @@ import FourthSection from '@/components/sections/FourthSection.vue'
 
 <style>
 .scroll-wrapper {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  @media screen and (max-width: 800px) {
-    height: calc(100vh - 60px);
-  }
 }
 
 .page {

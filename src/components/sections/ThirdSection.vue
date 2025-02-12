@@ -66,6 +66,9 @@ const closeQuestionnaireModal = () => {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  @media screen and (max-width: 800px) {
+    gap: 10px;
+  }
 }
 
 .time {
@@ -74,6 +77,9 @@ const closeQuestionnaireModal = () => {
   font-style: normal;
   color: #435B47;
   font-size: 50px;
+  @media screen and (max-width: 800px) {
+    font-size: 40px;
+  }
 }
 
 .event {
@@ -83,10 +89,17 @@ const closeQuestionnaireModal = () => {
 h1 {
   font-size: 60px;
   margin-bottom: 30px;
+  @media screen and (max-width: 800px) {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 h2 {
   font-size: 60px;
+  @media screen and (max-width: 800px) {
+    font-size: 50px;
+  }
 }
 .questionnaire-wrap {
   padding: 15px;
@@ -109,7 +122,7 @@ h2 {
   text-align: center;
   width: 60%;
   font-size: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .button {

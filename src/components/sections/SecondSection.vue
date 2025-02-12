@@ -6,16 +6,18 @@ import SectionUi from '@/components/SectionUi.vue'
 <template>
   <section-ui show-top="true">
     <div class="second-section-container">
-      <div class="second-section-wrap">
-        <h3>Дорогие гости!</h3>
-        <p>В НАШЕЙ ЖИЗНИ ПРОИЗОЙДЕТ ОЧЕНЬ ВАЖНОЕ СОБЫТИЕ - НАША СВАДЬБА!
-          ПОЗВОЛЬТЕ ПРИГЛАСИТЬ ВАС РАЗДЕЛИТЬ С НАМИ РАДОСТЬ ЭТОГО ДНЯ</p>
-      </div>
-      <img src="../../../public/icons/calendar.png" alt="">
-      <div class="second-section-wrap location">
-        <h3>Локация:</h3>
-        <p>РЕСТОРАН “ЗАВИДНОЕ”<br/>
-          РАБОЧИЙ ПОСЕЛОК ИЗМАЙЛОВО, 23, СТР. 1</p>
+      <div class="test">
+        <div class="second-section-wrap">
+          <h3>Дорогие гости!</h3>
+          <p>В НАШЕЙ ЖИЗНИ ПРОИЗОЙДЕТ ОЧЕНЬ ВАЖНОЕ СОБЫТИЕ - НАША СВАДЬБА!
+            ПОЗВОЛЬТЕ ПРИГЛАСИТЬ ВАС РАЗДЕЛИТЬ С НАМИ РАДОСТЬ ЭТОГО ДНЯ</p>
+        </div>
+        <img src="../../../public/icons/calendar.png" alt="">
+        <div class="second-section-wrap location">
+          <h3>Локация:</h3>
+          <p>РЕСТОРАН “ЗАВИДНОЕ”<br/>
+            РАБОЧИЙ ПОСЕЛОК ИЗМАЙЛОВО, 23, СТР. 1</p>
+        </div>
       </div>
     </div>
   </section-ui>
@@ -25,24 +27,34 @@ import SectionUi from '@/components/SectionUi.vue'
 .second-section-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100dvh;
-  gap: 4.98vw;
-  margin: 0 auto;
   color: #435B47;
   width: 100%;
   @media screen and (min-width: 800px) {
     gap: 30px;
   }
 }
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.98vw;
+  margin-bottom: 40px;
+}
+
 img {
   width: 300px;
-  margin-bottom: 30px;
 }
 
 p {
   font-size: 20px;
+  @media screen and (max-width: 800px) {
+    font-size: 15px;
+  }
 }
 
 .second-section-wrap {

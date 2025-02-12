@@ -124,12 +124,15 @@ const sendMail = () => {
   padding: 35px;
   background: #CFC2B1;
   border-radius: 4px;
-  height: 90%;
+  height: 90dvh;
   gap: 20px;
   max-width: 500px;
   font-size: 18px;
   @media screen and (max-width: 800px) {
     width: 100%;
+    height: 85dvh;
+    box-sizing:border-box;
+    overflow-y: scroll;
   }
 }
 

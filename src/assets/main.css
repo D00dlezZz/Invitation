@@ -43,6 +43,9 @@ input[type="text"] {
   color: #435B47;
 }
 
+input::placeholder {
+  color: #435B47;
+}
 
 .button {
   border: none;

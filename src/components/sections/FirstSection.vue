@@ -23,7 +23,8 @@ import SectionUi from '@/components/SectionUi.vue'
   margin: 0 auto;
 }
 h1 {
-  margin-bottom: 1.77vw;
+  margin-bottom: 2.77vw;
+  margin-left: -10px;
 }
 .img-flex {
   display: flex;
@@ -31,7 +32,10 @@ h1 {
 
 img {
   width: 100vw;
-  max-width: 430px;
+  max-width: 420px;
   margin-left: -10px;
+  @media screen and (max-width: 800px) {
+    max-width: 370px;
+  }
 }
 </style>

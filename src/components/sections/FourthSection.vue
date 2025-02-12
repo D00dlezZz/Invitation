@@ -43,11 +43,11 @@ import SectionUi from '@/components/SectionUi.vue'
 }
 
 .dress-code {
-  width: 70%;
+  width: 55%;
 }
 
 .presents {
-  width: 70%;
+  width: 55%;
   margin-top: 30px;
 }
 
